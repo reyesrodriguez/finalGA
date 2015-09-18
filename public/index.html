@@ -1,0 +1,65 @@
+<html ng-app="finalNode">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Visualization</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" http://code.jquery.com/ui/1.9.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" src="/styles.css"></link>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+    <script src="/jquery-ui.js"></script>
+    <script src="/main.js"></script>
+    <script src="/slider.js"></script>
+
+</head>
+<div class="container">
+<div class="row">
+  <div class="col-md-8">
+
+<body ng-controller="mainController">
+   
+
+        <h1>Data Viz<span class"label label-info">{{ entities.length }}</span></h1>
+     
+      
+      <div id="entity-list" class="row">
+          <div class="checkbox" ng-repeat="entity in entities">
+          <label>
+            <input type="checkbox" ng-click="deleteEntity(entity._id)">{{entity.name}}
+          </label>
+        </div>
+      </div>
+  
+     <div id="entity-form" class="row">
+           <form>
+              <div class="form-group">
+                  <input type="text" class="form-control input-lg center" placeholder="name" ng-model="formData.name">
+              </div>
+            
+       <div class="slider">
+  <div id="slider" class="slider"></div><br>
+    <label for="amount">Number:</label>
+    <input type="text" class="amount" readonly style="border:0; color:#f6931f; font-weight:bold;" title="We ask for your age only for statistical purposes."><br><br>
+
+    <div id="slider2" class="slider"></div><br>
+    <label for="amount2">Number:</label>
+    <input type="text" class="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;"title="We ask for your age only for statistical purposes."><br><br>
+
+    <div id="slider3" class="slider"></div><br>
+    <label for="amount3">Number:</label>
+    <input type="text" class="amount3" readonly style="border:0; color:#f6931f; font-weight:bold;"title="We ask for your age only for statistical purposes."><br><br>
+</div>
+    <button type="submit" class="btn btn-primary btn-lg" ng-click="createEntity()">Add</button>
+                </form>
+</div>
+
+
+</div>
+
+</body>
+</html>
+
