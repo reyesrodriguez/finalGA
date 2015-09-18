@@ -2,6 +2,7 @@ var mongoose=require('mongoose');
 
 module.exports = mongoose.model('Entity',{
 	name: String,
+	about: String,
 	attachment: String,
 	confidence: Number,
 	articulate: Number,

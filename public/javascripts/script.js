@@ -1,4 +1,4 @@
-var finalNode = angular.module('finalNode', []);
+angular.module('finalNode', []);
 
 finalNode.controller('mainController', function($scope){
 	$scope.message = "Hello Everyone!!!";

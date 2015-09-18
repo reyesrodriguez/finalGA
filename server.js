@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose   = require('mongoose');
 // var database = require('./config/database');
+// Entity = mongoose.model('Entity');
+// require('./models/entity');
 
 
 app.use(express.static(__dirname + '/public'));
@@ -47,6 +49,12 @@ router.use(function(req, res, next) {
 router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });   
 });
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
   
   app.get('/api/entities', function(req, res) {
 
@@ -68,10 +76,12 @@ router.get('/', function(req, res) {
             name : req.body.name,
             about : req.body.about,
             confidence : req.body.confidence,
+            articulate : req.body.articulate,
             done : false
         }, function(err, entity) {
             if (err)
                 res.send(err);
+
 
         
             Entity.find(function(err, entities) {
@@ -104,7 +114,7 @@ router.get('/', function(req, res) {
 
 //---------------------aplication----------
 
-app.get('', function(req, res){
+app.get('/', function(req, res){
   res.sendFile('./public/index.html');
 });
 

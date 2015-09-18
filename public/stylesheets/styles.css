@@ -3,17 +3,17 @@
 	margin:auto;
 }
 
-.ui-slider-range {
+.slidercolor {
 	background-color: #009999;
 }
 
 .ui-tooltip, .arrow:after {
-	background: lightgrey;
+	background: black;
 	border: 2px solid white;
 }
 .ui-tooltip {
     padding: 10px 20px;
-    color: black;
+    color: white;
     border-radius: 20px;
     font: bold 14px "Helvetica Neue", Sans-Serif;
     text-transform: uppercase;

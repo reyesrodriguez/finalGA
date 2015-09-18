@@ -6,18 +6,19 @@ $('#slider').slider({
 	range: "max",
 	max:50,
 	min:1,
-	value: $("#amount").val(),
+	value:1,
 	slide: function(event, ui){
 		$('.amount').val(ui.value)
 	}
 });
-$('.amount').val($('#slider').slider("value"));
+
+var val = $('.amount').val($('#numbers').slider("value"));
 
 $('#slider2').slider({
 	range: "max",
 	max:50,
 	min:1,
-	value: $("#amount").val(),
+	value:1,
 	slide: function(event, ui){
 		$('.amount2').val(ui.value)
 	}
