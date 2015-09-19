@@ -59,7 +59,27 @@ $(function(){
 		track:true
 	})
 })
-
+function updateTextInput(val) {
+    document.getElementById('textInput').value=val;
+     
+    }
+    function updateTextInputTwo(val) {
+     document.getElementById('textInputTwo').value=val;
+    }
+    function updateTextInputThree(val) {
+    document.getElementById('textInputThree').value=val;
+     
+    }
+    function updateTextInputFour(val) {
+     document.getElementById('textInputFour').value=val;
+    }
+    function updateTextInputFive(val) {
+     document.getElementById('textInputFive').value=val;
+     
+    }
+    function updateTextInputSix(val) {
+     document.getElementById('textInputSix').value=val;
+    }
 
 
 
