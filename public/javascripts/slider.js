@@ -59,7 +59,7 @@ $(function(){
 		track:true
 	})
 })
-function updateTextInput(val) {
+	function updateTextInput(val) {
     document.getElementById('textInput').value=val;
      
     }
