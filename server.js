@@ -52,7 +52,7 @@ router.get('/', function(req, res) {
 
 app.use(function (req, res, next) {
     'use strict';
-
+//---------lets applications use the api---------------//
     res.header('Access-Control-Allow-Origin', '*');
 
     if (req.headers['access-control-request-method']) {
@@ -70,7 +70,8 @@ app.use(function (req, res, next) {
         next();
     }
 });
-  
+
+//--------------------api crud routes begins---------------// 
   app.get('/api/entities', function(req, res) {
 
         
@@ -88,15 +89,18 @@ app.use(function (req, res, next) {
 
         
         Entity.create({
-            name : req.body.name,
-            about : req.body.about,
+            borough : req.body.borough,
+            neighborhood : req.body.neighborhood,
+            rent : req.body.rent,
             confidence : req.body.confidence,
-            articulate : req.body.articulate,
+            happiness : req.body.happiness,
+            negative : req.body.negative,
+            safe : req.body.safe,
+            real : req.body.real,
             done : false
         }, function(err, entity) {
             if (err)
                 res.send(err);
-
 
         
             Entity.find(function(err, entities) {

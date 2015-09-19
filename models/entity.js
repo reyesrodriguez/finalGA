@@ -1,14 +1,14 @@
 var mongoose=require('mongoose');
 
 module.exports = mongoose.model('Entity',{
-	name: String,
-	about: String,
-	attachment: String,
+	borough: String,
+	neighborhood: String,
+	rent: Number,
 	confidence: Number,
-	articulate: Number,
-	dependable: Number,
-	friendly: Number,
-	outgoing: String
+	happiness: Number,
+	negative: Number,
+	safe: Number,
+	real: Number
 });
 
 
