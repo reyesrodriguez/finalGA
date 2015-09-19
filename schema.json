@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://45.55.46.92:8080/api/gentri",
+  "type": "object",
+  "properties": {
+    "address": {
+      "id": "http://45.55.46.92:8080/api/gentri/address",
+      "type": "object",
+      "properties": {
+        "streetAddress": {
+          "id": "http://45.55.46.92:8080/api/gentri/address/streetAddress",
+          "type": "string",
+          "default": "21 2nd Street",
+          "enum": [
+            null,
+            "21 2nd Street"
+          ]
+        },
+        "borough": {
+          "id": "http://45.55.46.92:8080/api/gentri/address/borough",
+          "type": "string",
+          "default": "Brooklyn",
+          "enum": [
+            null,
+            "Brooklyn"
+          ]
+        }
+      },
+      "required": [
+        "streetAddress",
+        "borough"
+      ]
+    },
+    "entities": {
+      "id": "http://45.55.46.92:8080/api/gentri/entities",
+      "type": "array",
+      "items": {
+        "id": "http://45.55.46.92:8080/api/gentri/entities/0",
+        "type": "object",
+        "properties": {
+          "name": {
+            "id": "http://45.55.46.92:8080/api/gentri/entities/0/name",
+            "type": "integer",
+            "default": 1000,
+            "enum": [
+              null,
+              1000
+            ]
+          },
+          "about": {
+            "id": "http://45.55.46.92:8080/api/gentri/entities/0/about",
+            "type": "string",
+            "default": "l",
+            "enum": [
+              null,
+              "l"
+            ]
+          },
+          "happiness": {
+            "id": "http://45.55.46.92:8080/api/gentri/entities/0/happiness",
+            "type": "integer",
+            "default": 50,
+            "enum": [
+              null,
+              50
+            ]
+          },
+          "confidence": {
+            "id": "http://45.55.46.92:8080/api/gentri/entities/0/confidence",
+            "type": "integer",
+            "default": 20,
+            "enum": [
+              null,
+              20
+            ]
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "address",
+    "entities"
+  ]
+}
