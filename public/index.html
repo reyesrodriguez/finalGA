@@ -19,8 +19,9 @@
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
     <!-- d3 links  -->
-    <link href="css/hover.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/d3/css/hover.css" rel="stylesheet">
+    <link href="/d3/css/style.css" rel="stylesheet">
+    <link href="/stylesheets/styles.css" rel="stylesheet">
     <!--  -->
     <script src="javascripts/main.js"></script>
     <script src="javascripts/slider.js"></script>
@@ -29,11 +30,7 @@
     <!--  -->
 
 </head>
-<div class="container">
-<div class="row">
-  <div class="col-md-8">
 
-<body ng-controller="mainController">
 <script>
   function updateTextInput(val) {
     document.getElementById('textInput').value=val;
@@ -57,6 +54,14 @@
      document.getElementById('textInputSix').value=val;
     }
 </script>
+<body ng-controller="mainController">
+
+
+<div class="container">
+<div class="row">
+<div class="col-md-8">
+
+
    
 <h1>Data Viz <span class"label label-info">{{ entities.length }}</span></h1>
     <div id="entity-list" class="row">
@@ -78,26 +83,26 @@
                   <input type="text" class="form-control input-lg center" placeholder="Bed-stuy, LES, Bushwick etc.." ng-model="formData.neighborhood">
               </div>
             <h3>Rent</3>
-              <input id="slider" type="range" name="input" class="amount" min="500" max="10000" value="1"ng-model="formData.rent" onchange="updateTextInput(this.value);">
+              <input id="slider" type="range" name="input" class="amount" min="500" max="6000" value="1"ng-model="formData.rent" onchange="updateTextInput(this.value);">
               <input type="text" id="textInput" val=""><br><br>
             <h3>In a scale from 1 to 50 how confident you feel about the neighborhood.</h3>
-              <input id="slider" type="range" name="input" class="amount" min="0" max="99" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.confidence"onchange="updateTextInputTwo(this.value);">
+              <input id="slider" type="range" name="input" class="amount" min="1" max="50" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.confidence"onchange="updateTextInputTwo(this.value);">
               <input type="text" id="textInputTwo" val="">
               <br><br>
             <h3>In a scale from 1 to 50 how happy you feel about the neighborhood you live in .</h3>
-              <input id="slider" type="range" name="input" class="amount" min="0" max="99" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.happiness"onchange="updateTextInputThree(this.value);">
+              <input id="slider" type="range" name="input" class="amount" min="1" max="50" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.happiness"onchange="updateTextInputThree(this.value);">
               <input type="text" id="textInputThree" val="">
               <br><br>
             <h3>In a scale from 1 to 50 how angry you feel about the neighborhood you live in .</h3>
-              <input id="slider" type="range" name="input" class="amount" min="0" max="99" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.negative"onchange="updateTextInputFour(this.value);">
+              <input id="slider" type="range" name="input" class="amount" min="1" max="50" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.negative"onchange="updateTextInputFour(this.value);">
               <input type="text" id="textInputFour" val="">
               <br><br>
             <h3>In a scale from 1 to 50 how safe you feel about the neighborhood you live in .</h3>
-              <input id="slider" type="range" name="input" class="amount" min="0" max="99" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.safe"onchange="updateTextInputFive(this.value);">
+              <input id="slider" type="range" name="input" class="amount" min="1" max="50" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.safe"onchange="updateTextInputFive(this.value);">
               <input type="text" id="textInputFive" val="">
               <br><br>
             <h3>In a scale from 1 to 50 how real your expectations are from never moving to another neighborhod.</h3>
-              <input id="slider" type="range" name="input" class="amount" min="0" max="99" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.real"onchange="updateTextInputSix(this.value);">
+              <input id="slider" type="range" name="input" class="amount" min="1" max="50" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.real"onchange="updateTextInputSix(this.value);">
               <input type="text" id="textInputSix" val="">
               <br><br>
             
@@ -106,6 +111,9 @@
 </div>
 
 
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>
