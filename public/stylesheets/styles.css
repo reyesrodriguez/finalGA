@@ -1,16 +1,27 @@
-.container {
-  margin-left:10%;
+/*body {
+  margin:auto;
   text-align:center;
-}
+}*/
 
+
+.your-view.ng-leave { display:none; }
 .sliders{
-	width: 300px;
+	width: 200px;
 	margin:auto;
+  border:none;
+  text-align: center;
+  color: red;
+  font-size: 1em;
 }
 
-.slidercolor {
-	background-color: #009999;
+.right{
+  text-align:center;
+  margin-left:70%;
+  position:absolute;
 }
+
+
+
 
 .ui-tooltip, .arrow:after {
 	background: black;
@@ -85,4 +96,99 @@ output:after {
   left: 50%;
   margin-left: -5px;
   margin-top: -1px;
+}
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Asap:700,400italic);
+
+.curse {
+  font-family: 'Asap', sans-serif;
+    font-weight: 700px;
+  text-align: center;
+  margin: 1%;
+}
+
+.reload {
+  margin-left: 47%;
+  text-align: center;
+}
+
+.italic {
+  font-family: 'Asap', sans-serif;
+    font-weight: 400italic;
+}
+/*
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    font-size: 1em;
+    margin-left: 10%;
+    font-family: 'Asap', sans-serif;
+    font-weight: 400px;
+    font-style: italic;
+
+}*/
+#viz {
+  border: 5px solid lightgray;
+  background-color: #e6f0ed;
+  
+      }
+
+.circle:hover {
+  background-color: orangered ;
+}
+.hvr-hang {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.d3-tip  {
+  line-height: 1;
+  font-weight: bold;
+  padding: 15px;
+  background:rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 10%;
+  opacity: 0.3;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.y, .x {
+  opacity: 0.5;
+}
+
+.label {
+  font-color:red;
 }

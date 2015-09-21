@@ -1,4 +1,4 @@
-var finalNode = angular.module('finalNode', []);
+var finalNode = angular.module('finalNode', ['ngRoute']);
 
 function mainController($scope, $http) {
     $scope.formData = {};
@@ -38,3 +38,5 @@ function mainController($scope, $http) {
     };
 
 }
+
+
