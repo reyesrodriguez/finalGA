@@ -19,6 +19,7 @@ function mainController($scope, $http) {
             .success(function(data) {
                 $scope.formData = {}; 
                 $scope.entities = data;
+                $scope.formData = {};
                 console.log(data);
             })
             .error(function(data) {

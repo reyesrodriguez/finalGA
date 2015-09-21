@@ -1,23 +1,20 @@
 
 
-<body ng-controller="mainController" class="container">
+<body ng-controller="mainController" >
+<div class="container">
   <div class="row right"> 
- <div class="col-md-6"> 
-<h1>Data Viz <span class"labels label-info"></span></h1>
+ <div class="col-md-6 wright">
+ 
+<button class="btn btn-primary" type="button">
+  Data Log  <span class="badge">{{entities.length}}</span>
+</button>
     
         <div class="checkbox" ng-repeat="entity in entities">
           <label>
-        <input type="checkbox" ng-click="deleteEntity(entity._id)">Thanks for submitting your info!{{entity.neighborhood}}{{entity.created_at}}
+        <input type="checkbox" ng-click="deleteEntity(entity._id)">Thanks for submitting your info!{{entity.neighborhood}}
         </label>
         </div>
       </div>
-    </div>
-   
-    <div class="row">
-    <div class="col-md-6">
-    <h2> Data Viz </h2>
-    <hr>
-    </div>
     </div>
 
 
@@ -34,7 +31,7 @@
               <div class="row">
                 <div class="col-md-6">
                 <h3>Neighborhood You live In</h3>
-                  <input type="text" name="neighborhood" class=" form-control input-lg center" placeholder="Bed-stuy, LES, Bushwick etc.." ng-model="formData.neighborhood" required>
+                  <input type="text" name="neighborhood" class="form-control input-lg center" placeholder="Bed-stuy, LES, Bushwick etc.." ng-model="formData.neighborhood" required>
                   <p ng-show="userForm.neighborhood.$error.required">Your username is required.</p>
               </div>
               </div>
@@ -42,7 +39,7 @@
               <div class="col-md-6">
             <h3>Rent</3>
               <input id="slider" type="range" name="input" class="amount" min="500" max="6000" value="1"ng-model="formData.rent" onchange="updateTextInput(this.value);">
-              <input type="text" class="sliders" id="textInput" val=""><br><br>
+              <input type="text" class="sliders" id="textInput" val="">
               </div>
               </div>
 
@@ -51,7 +48,6 @@
             <h3>In a scale from 1 to 50 how angry you feel about the neighborhood you live in .</h3>
               <input id="slider" type="range" name="input" class="amount" min="1" max="50" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.negative"onchange="updateTextInputFour(this.value);">
               <input type="text" class="sliders"id="textInputFour" val="">
-              <br><br>
               </div>
               </div>
 
@@ -60,7 +56,6 @@
             <h3>In a scale from 1 to 50 how safe you feel about the neighborhood you live in .</h3>
               <input id="slider" type="range" name="input" class="amount" min="1" max="50" title="We ask for your age only for statistical purposes." ng-value=""ng-model="formData.safe"onchange="updateTextInputFive(this.value);">
               <input type="text" class="sliders"id="textInputFive" val="">
-              <br><br>
                <button type="submit" class="btn btn-primary btn-lg" ng-click="createEntity()">Add</button>
               </div>
               </div>
@@ -68,7 +63,7 @@
            </form>
          </div>
 
-
+</div>
 
   <script>
   function updateTextInput(val) {

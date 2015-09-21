@@ -1,10 +1,18 @@
-/*body {
-  margin:auto;
-  text-align:center;
-}*/
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
 
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
 
-.your-view.ng-leave { display:none; }
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
+
+.header {
+  background-color: red;
+}
 .sliders{
 	width: 200px;
 	margin:auto;
@@ -16,8 +24,24 @@
 
 .right{
   text-align:center;
-  margin-left:70%;
+  margin-left:68%;
   position:absolute;
+  padding:;
+  background-color: #3D9970;
+  border: 2px solid #DDDDDD;
+    width: 300px;
+  height: 500px;
+  overflow: scroll;
+  
+}
+
+.left {
+  margin-left: 3%;
+}
+
+.navbar{
+  background-color: #85144b;
+  color: red;
 }
 
 
@@ -139,7 +163,7 @@ li {
 #viz {
   border: 5px solid lightgray;
   background-color: #e6f0ed;
-  
+  margin-left: 15%;
       }
 
 .circle:hover {
