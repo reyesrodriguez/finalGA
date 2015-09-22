@@ -1,8 +1,8 @@
-<body>
+<hr class="line">
 <div>
-<h1 class="curse">Student Curse Data During WDI </h1>
-<h4 class="curse italic">Number of curse words on a weekly basis.</h4>
+<h1 class="curse">Data Visualisation</h1>
 </div>
+
 <p></p>
 <script>
  $(document).ready(function(){
@@ -11,8 +11,8 @@
 
  //-------------this is size of viz window--------------//
 var margin = {top: 40, right: 20, bottom: 30, left: 40},
-    width = 800 - margin.right - margin.left
-    height = 500 - margin.top - margin.bottom;
+    width = 600 - margin.right - margin.left
+    height = 400 - margin.top - margin.bottom;
 var padding = 70;
 //-------------this starts the axis------------//
 //------------tip function-----------//
@@ -41,7 +41,7 @@ d3.json("http://45.55.46.92:8080/api/entities/", function(data){
 // yScale.domain([0, d3.max(data, yValue)+1]);
 //--------------creates the axis and ticks----------------//
 var xValue = function(d) { return d.rent;},
-    xScale = d3.scale.linear().domain([0, 6800, d3.max(data, function(d){return d.rent;})])
+    xScale = d3.scale.linear().domain([500, 6000, d3.max(data, function(d){return d.rent;})])
     .range([0, width]),
     xMap = function(d){ return xScale(xValue(d));},
     xAxis = d3.svg.axis().scale(xScale).orient("bottom");
@@ -58,7 +58,7 @@ var yValue = function(d) { return d.negative;},
       .append("text")
       .attr("class", "label")
       .attr("x", width)
-      .attr("x", 770)
+      .attr("x", 700)
       .attr("y", 19)
       .style("text-anchor", "end")
       .text("Rent")
@@ -89,7 +89,7 @@ var yValue = function(d) { return d.negative;},
 		.style('opacity', 0.6)
 		.style('fill', function(d){
 			if(d.borough === "brooklyn"){
-				return "purple"
+				return "FF0000"
 			}
 			else if(d.borough === "queens"){
 				return "red"

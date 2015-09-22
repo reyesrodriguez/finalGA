@@ -1,23 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Asap:700,400italic);
 
-.curse {
-  font-family: 'Asap', sans-serif;
-    font-weight: 700px;
-  text-align: center;
-  margin: 1%;
-}
 
-.reload {
-  margin-left: 47%;
-  text-align: center;
-}
-
-.italic {
-  font-family: 'Asap', sans-serif;
-    font-weight: 400italic;
-}
-
-ul {
+/*ul {
     list-style-type: none;
     padding: 0;
 }
@@ -30,13 +13,8 @@ li {
     font-weight: 400px;
     font-style: italic;
 
-}
-#viz {
-	border: 5px solid lightgray;
-  
-	margin-left:18%;
-  background-color: #e6f0ed;
-			}
+}*/
+
 .circle:hover {
   background-color: orangered ;
 }
@@ -82,10 +60,11 @@ li {
 
 .y, .x {
   opacity: 0.5;
+  color: white;
+}
+.labels{
+  color: white;
 }
 
-.label {
-  font-color:red;
-}
 
 

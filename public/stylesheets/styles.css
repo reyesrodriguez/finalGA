@@ -1,51 +1,257 @@
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+@import url(https://fonts.googleapis.com/css?family=Enriqueta:700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,900italic,400italic,700,700italic,900);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300italic|Fira+Sans:400,300italic);
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { ... }
+body{
+  background: ;
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { ... }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { ... }
-
-.header {
-  background-color: red;
 }
-.sliders{
-	width: 200px;
-	margin:auto;
-  border:none;
+
+.container-fluid{
+  padding-top: 3%;
+
+
+}
+/*---------------home page fonts and placement of columns-------------*/
+.titlehome{
+  font-size: 3em;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300 italic;
+  color:#800000;
+}
+
+.form{
+  position: absolute;
+  margin-left: 43%;
+  
+
+}
+.submit {
   text-align: center;
+}
+
+.navbar{
+  position: absolute;
+  
+
+}
+
+.line{
+  border-top:grey 2px solid;
+}
+
+.linetwo{
+  border-top: white;
+  padding-top: 2%;
+}
+
+
+.name {
+  font-size: 4em;
+  text-decoration: none;
+  font-family: 'Enriqueta', serif;
+  font-weight: 400;
+  padding-bottom: 20%;
+
+}
+
+.route{
+  font-size: 2em;
+  margin-left: 5%;
+  text-decoration: none;
+  color:#800000;
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: 'Merriweather', serif;
+  font-weight: 400 italic;
+}
+
+/*----------------slider positioning---------------*/
+#slider {
+	width: 400px;
+}
+
+.slidersfont{
+  width: 45px;
+  font-size: 1.5em;
+  border: none;
   color: red;
-  font-size: 1em;
+  padding-bottom: 5px;
+  
+}
+
+.sliders{
+  width: 90px;
+  margin:auto;
+  border: none;
+  color: red;
+  
 }
 
 .right{
   text-align:center;
-  margin-left:68%;
-  position:absolute;
-  padding:;
-  background-color: #3D9970;
-  border: 2px solid #DDDDDD;
-    width: 300px;
-  height: 500px;
+  margin:auto;
+  width: auto;
+  height:auto;
   overflow: scroll;
+ }
+
+
+/*-------the chart in data-------------*/
+
+#viz {
+  margin-left:1px;
+}
+
+/*-----------links------------*/
+a:link{
+  text-decoration: none
+}
+
+a:hover, :after {
   
-}
+  text-decoration: none;
+  border-radius: 10px 10px 10px 10px;
+ -moz-border-radius: 10px 10px 10px 10px;
+ -webkit-border-radius: 10px 10px 10px 10px;
 
-.left {
-  margin-left: 3%;
-}
-
-.navbar{
-  background-color: #85144b;
-  color: red;
 }
 
 
 
+/*------created a mini card for the log ---------------*/
+.mini-card{
+  width:500px;
+  height:40px;
+  text-align: left;
+  border: 2px solid #8f8f8f;border-radius: 9px 9px 9px 9px;
+  -moz-border-radius: 9px 9px 9px 9px;
+  -webkit-border-radius: 9px 9px 9px 9px;
+  border: 2px solid #8f8f8f;
+
+}
+
+input.carbutton{
+  padding-bottom:3px;
+  width:12px;
+  height:12px;
+}
+
+.badge{
+  background-color: #52bab3;
+}
+
+
+/*---------------------------crazy long code for styling the slider ranges from css-tricks!!!--------*/
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+/*------------d3 styling------------------*/
 
 .ui-tooltip, .arrow:after {
 	background: black;
@@ -92,9 +298,7 @@
     top: auto;
   }
 
-
-
-  output { 
+output { 
   position: absolute;
   background-image: linear-gradient(top, #444444, #999999);
   width: 40px; 
@@ -108,6 +312,7 @@
   left: 0;
   margin-left: -1%;
 }
+
 output:after { 
   content: "";
   position: absolute;
@@ -122,49 +327,6 @@ output:after {
   margin-top: -1px;
 }
 
-
-
-
-
-
-@import url(https://fonts.googleapis.com/css?family=Asap:700,400italic);
-
-.curse {
-  font-family: 'Asap', sans-serif;
-    font-weight: 700px;
-  text-align: center;
-  margin: 1%;
-}
-
-.reload {
-  margin-left: 47%;
-  text-align: center;
-}
-
-.italic {
-  font-family: 'Asap', sans-serif;
-    font-weight: 400italic;
-}
-/*
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    display: inline;
-    font-size: 1em;
-    margin-left: 10%;
-    font-family: 'Asap', sans-serif;
-    font-weight: 400px;
-    font-style: italic;
-
-}*/
-#viz {
-  border: 5px solid lightgray;
-  background-color: #e6f0ed;
-  margin-left: 15%;
-      }
 
 .circle:hover {
   background-color: orangered ;
@@ -210,9 +372,9 @@ li {
 }
 
 .y, .x {
-  opacity: 0.5;
+
+ color: white;
 }
 
-.label {
-  font-color:red;
-}
+
+

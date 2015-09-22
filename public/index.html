@@ -22,10 +22,9 @@
 <!-- load angular
     <!-- d3 links  -->
 <link href="/stylesheets/hover.css" rel="stylesheet">
-    <!-- <link href="/stylesheets/style.css" rel="stylesheet"> -->
+<link href="/stylesheets/style.css" rel="stylesheet">
 <link href="/stylesheets/styles.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-<script src="semantic/dist/semantic.min.js"></script>
+<link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
     <!--  -->
 <script src="javascripts/main.js"></script>
 <script src="javascripts/router.js"></script>
@@ -35,30 +34,24 @@
     <!--  -->
 </head>
 <body>
-<nav class="navbar navbar-default navbar">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <ul class="nav navbar-nav">
-        <span class="sr-only">Toggle navigation</span>
-        <li><span class="icon-bar"><a class="active" href="#">Homa</a></span></li>
-        <li><span class="icon-bar"><a  href="#/data">Data</a></span></li>
-        </ul>
-      </button>
-       <ul class="nav navbar-nav">
-      <li><a class="navbar-brand" href="#">Data Visualization</a></li>
-      <li><a class="active" href="#">Form</a></li>
-      <li><a  href="#/data">Chart</a></li>
-    </ul>
-    </div>
+<div class="container-fluid">
+
+  <div class="form">
+  <div ng-view></div> 
   </div>
-</nav>
-
-
-
-<div ng-view></div>
-
+  
+    <hr class="linetwo">
+  
+    <div class=".col-md-3 navbar">
+    <!-- Brand and toggle get grouped for better mobile display -->
+      <p><a class="navbar-brand name" href="#">Data Visualization</a></p><br><br>
+      <p><a class="route" href="#">Form</a></p>
+      <p><a class="route" href="#/data">Chart</a></p>
+      <p><a class="route" href="#/datalog">Datalog</a></p>
+    </ul>
+  </div>
+</div>
+ 
 </body>
 </html>
 

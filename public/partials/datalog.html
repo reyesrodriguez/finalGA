@@ -1,0 +1,23 @@
+ <div ng-controller="mainController" >
+
+ <div class="row right"> 
+ <div class=".col-md-12 right">
+ <hr class="line">
+ 
+
+	<button class="btn btn-primary" type="button">
+  		Data Log  <span class="badge">{{entities.length}}</span>
+	</button>
+   
+
+  <div class="checkbox .col-md-12" ng-repeat="entity in entities">
+  <div class="mini-card">
+  <label>
+  <input type="button" class="carbutton" ng-click="deleteEntity(entity._id)">Thanks for submitting your info dear resident of {{entity.borough}} <span class="badge">{{entity.rent}}</span>. 
+  </label>
+  </div><br>
+
+ 	</div>
+ 	</div>
+
+ <div>
