@@ -3,10 +3,10 @@ var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose   = require('mongoose');
-var passport = require('passport');
+// var passport = require('passport');
 
-require('./models/user');
-require('./config/passport');
+// require('./models/user');
+// require('./config/passport');
 app.use(express.static(__dirname + '/public'));
 
 
