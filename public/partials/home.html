@@ -13,40 +13,46 @@
 
   </script>
 
-<body ng-controller="mainController" >
+<body ng-finalNode="validationApp" ng-controller="mainController" >
                
               <div class=".col-md-9 col-xs">
               <hr class="line">
-              <form>
+              <form name="userForm" novalidate>
+
+            
                 <h1 class="titlehome">Questionnaire</h1>
                 <h4>Borough You live In</h4>
-                  <input id="slider" type="text" name="borough" class="form-control input-lg center" placeholder="Brooklyn, bronx etc..." ng-model="formData.borough">
-              
+                  <input id="slider" type="text" name="borough" class="form-control input-lg center text-lowercase" placeholder="brooklyn, bronx, state island etc..." ng-model="formData.borough"  ng-minlength="2" ng-maxlength="10" required>
+               <div class="help-block" ng-messages="userForm.borough.$error" ng-if="userForm.borough.$touched">
+                  <p ng-message="minlength">Your name is too short.</p>
+                  <p ng-message="required">Your name is required.</p>
+              </div>
         
                 <h4>Neighborhood You live In</h4>
-                  <input id="slider" type="text" name="neighborhood" class="form-control input-lg center" placeholder="Bed-stuy, LES, Bushwick etc.." ng-model="formData.neighborhood">
+                  <input id="slider" type="text" name="neighborhood" class="form-control input-lg center text-lowercase" placeholder="bed-stuy, east-village, bushwick etc.." ng-model="formData.neighborhood" ng-minlength="2" ng-minlength="10" required>
               
 
               
             <h4>Rent</4>
               <input id="slider" type="range" name="input" class="amount" min="500" max="3000" value="1" title="We ask for your age only for statistical purposes." ng-model="formData.rent" onchange="updateTextInput(this.value);">
-              <input type="text" class="sliders" id="textInput" val=""><br>
+              <input type="text" class="sliders" id="textInput" val="" required><br>
              
 
             
             <h4>In a scale from 1 to 50 how angry you feel about the neighborhood.</h4>
               <input id="slider" type="range" name="input" class="amount" min="1" max="50" value="1" title="We ask for your age only for statistical purposes." ng-model="formData.negative"onchange="updateTextInputTwo(this.value);">
-              <input type="number" class="slidersfont" id="textInputTwo" val=""><br>
+              <input type="number" class="slidersfont" id="textInputTwo" val="" required><br>
               
 
             
             <h4>In a scale from 1 to 50 how safe you feel about the neighborhood.</h4>
               <input id="slider" type="range" name="input" class="amount" min="1" max="50" value="1" title="We ask for your age only for statistical purposes." ng-model="formData.safe" onchange="updateTextInputThree(this.value);">
-              <input type="text" class="slidersfont" id="textInputThree" val=""><br><br>
-              <button type="submit" class="btn btn-primary btn-lg submit" ng-click="createEntity()">Add</button>
+              <input type="text" class="slidersfont" id="textInputThree" val="" required><br><br>
+
+              <button type="submit" class="btn btn-primary btn-lg submit" ng-click="createEntity()" ng-disabled="userForm.$invalid">Submit</button>
               </form>
               </div><br>
-
+            </div>
             </div>
 
           

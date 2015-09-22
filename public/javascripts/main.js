@@ -1,4 +1,4 @@
-var finalNode = angular.module('finalNode', ['ngRoute']);
+var finalNode = angular.module('finalNode', ['ngRoute'], ['ngMessages']);
 
 function mainController($scope, $http) {
     $scope.formData = {};
