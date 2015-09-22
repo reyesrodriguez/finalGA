@@ -15,7 +15,7 @@
 
 <body ng-finalNode="validationApp" ng-controller="mainController" >
                
-              <div class=".col-md-9 col-xs">
+              <div class="3col-md-11 col-xs">
               <hr class="line">
               <form name="userForm" novalidate>
 
@@ -33,20 +33,20 @@
               
 
               
-            <h4>Rent</4>
-              <input id="slider" type="range" name="input" class="amount" min="500" max="3000" value="1" title="We ask for your age only for statistical purposes." ng-model="formData.rent" onchange="updateTextInput(this.value);">
+            <h4>Rent From 500 to 5000</4>
+              <input id="slider" type="range" name="input" class="amount" min="500" max="5000" value="1"  ng-model="formData.rent" onchange="updateTextInput(this.value);">
               <input type="text" class="sliders" id="textInput" val="" required><br>
              
 
             
             <h4>In a scale from 1 to 50 how angry you feel about the neighborhood.</h4>
-              <input id="slider" type="range" name="input" class="amount" min="1" max="50" value="1" title="We ask for your age only for statistical purposes." ng-model="formData.negative"onchange="updateTextInputTwo(this.value);">
+              <input id="slider" type="range" name="input" class="amount" min="1" max="50" value="1"  ng-model="formData.negative"onchange="updateTextInputTwo(this.value);">
               <input type="number" class="slidersfont" id="textInputTwo" val="" required><br>
               
 
             
             <h4>In a scale from 1 to 50 how safe you feel about the neighborhood.</h4>
-              <input id="slider" type="range" name="input" class="amount" min="1" max="50" value="1" title="We ask for your age only for statistical purposes." ng-model="formData.safe" onchange="updateTextInputThree(this.value);">
+              <input id="slider" type="range" name="input" class="amount" min="1" max="50" value="1"  ng-model="formData.safe" onchange="updateTextInputThree(this.value);">
               <input type="text" class="slidersfont" id="textInputThree" val="" required><br><br>
 
               <button type="submit" class="btn btn-primary btn-lg submit" ng-click="createEntity()" ng-disabled="userForm.$invalid">Submit</button>

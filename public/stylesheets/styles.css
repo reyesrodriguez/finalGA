@@ -7,10 +7,17 @@ body{
 
 }
 
-.container-fluid{
+.container{
   padding-top: 3%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 
-
+}
+.legend{
+  text-decoration: none;
+  display: inline;
 }
 /*---------------home page fonts and placement of columns-------------*/
 .titlehome{
@@ -43,7 +50,7 @@ body{
 }
 
 .line{
-  border-top:grey 2px solid;
+  border-top:grey 10px solid;
 }
 
 .linetwo{
@@ -53,10 +60,10 @@ body{
 
 
 .name {
-  font-size: 4em;
+  font-size: 3.2em;
   text-decoration: none;
   font-family: 'Enriqueta', serif;
-  font-weight: 400;
+  font-weight: 300 italic;
   padding-bottom: 20%;
 
 }
@@ -65,7 +72,7 @@ body{
   font-size: 2em;
   margin-left: 5%;
   text-decoration: none;
-  color:#800000;
+  color: #F08080;
   font-family: 'Merriweather', serif;
   font-weight: 400;
 }
@@ -266,7 +273,6 @@ input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
 /*------------d3 styling------------------*/
-
 .ui-tooltip, .arrow:after {
 	background: black;
 	border: 2px solid white;

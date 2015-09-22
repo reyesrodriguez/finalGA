@@ -1,7 +1,4 @@
 <hr class="line">
-<div>
-<h1 class="curse">Data Visualisation</h1>
-</div>
 
 <p></p>
 <script>
@@ -96,11 +93,11 @@ var yValue = function(d) { return d.negative;},
 		.attr('cy', function(d){return yScale(d.negative)})
 
 		.style('stroke', 'GAINSBORO')
-		.style('stroke-width', 2)
+		.style('stroke-width', 3)
 		.style('opacity', 0.8)
 		.style('fill', function(d){
 			if(d.borough === "brooklyn"){
-				return "LIGHTCORAL"
+				return "FIREBRICK"
 			}
 			else if(d.borough === "queens"){
 				return "STEELBLUE"
