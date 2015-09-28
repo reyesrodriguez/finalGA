@@ -2,24 +2,16 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,900italic,400italic,700,700italic,900);
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300italic|Fira+Sans:400,300italic);
 
-body{
-  background: ;
 
-}
-
-.container{
-  padding-top: 3%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-
-}
-.legend{
-  text-decoration: none;
-  display: inline;
-}
 /*---------------home page fonts and placement of columns-------------*/
+body {
+ padding-top: 70px; 
+}
+
+.navigacion{
+  position:;
+}
+
 .titlehome{
   font-size: 3em;
   font-family: 'Fira Sans', sans-serif;
@@ -27,54 +19,19 @@ body{
   color:#800000;
 }
 
-.form{
-  position: absolute;
-  margin-left: 43%;
-  
-
-}
-.submit {
-  text-align: center;
-}
-
 .navbar{
-  position: absolute;
-  
-
+  height: 50px;
 }
+
+.r{
+  margin-left: 35%;
+}
+
 
 .wright{
-  height:600px;
+  height:500px;
   width:600px;
   overflow:scroll;
-}
-
-.line{
-  border-top:grey 10px solid;
-}
-
-.linetwo{
-  border-top: white;
-  padding-top: 2%;
-}
-
-
-.name {
-  font-size: 3.2em;
-  text-decoration: none;
-  font-family: 'Enriqueta', serif;
-  font-weight: 300 italic;
-  padding-bottom: 20%;
-
-}
-
-.route{
-  font-size: 2em;
-  margin-left: 5%;
-  text-decoration: none;
-  color: #F08080;
-  font-family: 'Merriweather', serif;
-  font-weight: 400;
 }
 
 h4 {
@@ -105,18 +62,18 @@ h4 {
 }
 
 .right{
-  text-align:center;
-  margin:auto;
-  width: auto;
-  height:auto;
-  overflow: scroll;
+  width:600px;
+  top:22%;
+  left:50%;
+  margin:-100px 0 0 -220px;
+  position: absolute;
  }
 
 
 /*-------the chart in data-------------*/
 
 #viz {
-  margin-left:1%;
+  margin-right: 30%;
 }
 
 .label{

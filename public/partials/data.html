@@ -1,6 +1,8 @@
-<hr class="line">
 
+<div class="right">
+<h5 class="right">brooklyn bronx manhattan staten island queens</h5>
 <p></p>
+</div>
 <script>
  $(document).ready(function(){
  
@@ -8,7 +10,7 @@
 
  //-------------this is size of viz window--------------//
 var margin = {top: 40, right: 20, bottom: 30, left: 40},
-    width = 650 - margin.right - margin.left
+    width = 600 - margin.right - margin.left
     height = 500 - margin.top - margin.bottom;
 var padding = 70;
 //-------------this starts the axis------------//
@@ -32,9 +34,9 @@ d3.json("http://45.55.46.92:8080/api/entities/", function(data){
  	.attr('id', 'viz')
  	.attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
-  .call(d3.behavior.zoom().on("zoom", function () {
-        svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
-      }))
+  // .call(d3.behavior.zoom().on("zoom", function () {
+  //       svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
+  //     }))
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
     .call(tip)
@@ -44,7 +46,7 @@ d3.json("http://45.55.46.92:8080/api/entities/", function(data){
 // yScale.domain([0, d3.max(data, yValue)+1]);
 //--------------creates the axis and ticks----------------//
 var xValue = function(d) { return d.rent;},
-    xScale = d3.scale.linear().domain([500, 6500, d3.max(data, function(d){return d.rent;})])
+    xScale = d3.scale.linear().domain([0, 6500, d3.max(data, function(d){return d.rent;})])
     .range([0, width]),
     xMap = function(d){ return xScale(xValue(d));},
     xAxis = d3.svg.axis().scale(xScale).orient("bottom");

@@ -35,26 +35,24 @@
     <!--  -->
 </head>
 <body>
+
+<nav class="navbar-default navbar-fixed-top">
+  <div class="container r">
+    <ul class="nav navbar-nav">
+        <li><a href="#">Visualize</a></li>
+       <li><a href="#/home">Form</a></li>
+       <li><a href="#/data">Chart</a></li>
+       <li><a href="#/datalog">Datalog</a></li>
+     </ul>
+  </div>
+</nav>
 <div class="container">
 
-  <div class="form">
-  <div ng-view></div> 
-  </div>
- 
-  
-    <hr class="linetwo">
-  
-    <div class=".col-md-2 navbar">
-    <!-- Brand and toggle get grouped for better mobile display -->
-      <p><a class="navbar-brand name" href="#">Data Visualize</a></p><br><br>
-      <!-- <p><a class="route" href="#/about">About</a></p> -->
-      <p><a class="route" href="#/home">Form</a></p>
-      <p><a class="route" href="#/data">Chart</a></p>
-      <p><a class="route" href="#/datalog">Datalog</a></p>
-    </ul>
-  </div>
+<div ng-view></div>
 </div>
- 
+<!--   <div class="form">
+  </div> -->
+
 </body>
 </html>
 
