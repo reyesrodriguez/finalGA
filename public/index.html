@@ -35,24 +35,30 @@
     <!--  -->
 </head>
 <body>
+  <div class=".container">
 
-<nav class="navbar-default navbar-fixed-top">
-  <div class="container r">
+<nav class="navbar navbar-default .navbar-fixed-top">
+  <div class="container-fluid r">
     <ul class="nav navbar-nav">
-        <li><a href="#">Visualize</a></li>
+      <li class="name"><a href="#">Visualize</a></li>
+       <li><a href="#/about">About</a></li>
        <li><a href="#/home">Form</a></li>
        <li><a href="#/data">Chart</a></li>
        <li><a href="#/datalog">Datalog</a></li>
      </ul>
   </div>
 </nav>
-<div class="container">
+
 
 <div ng-view></div>
-</div>
+
 <!--   <div class="form">
   </div> -->
+</div>
 
+<footer>
+
+</footer>
 </body>
 </html>
 

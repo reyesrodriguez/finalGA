@@ -4,13 +4,18 @@
 
 
 /*---------------home page fonts and placement of columns-------------*/
-body {
- padding-top: 70px; 
+@media (min-width: 600px) {
+
+
+.container{
+  margin: auto;
+  max-width: 800px;
 }
 
-.navigacion{
-  position:;
+footer{
+  background-color: red;
 }
+
 
 .titlehome{
   font-size: 3em;
@@ -19,12 +24,14 @@ body {
   color:#800000;
 }
 
-.navbar{
-  height: 50px;
+.name {
+  font-size: 2em;
+  font-color:#800000;
 }
 
+
 .r{
-  margin-left: 35%;
+  margin-left: 30%;
 }
 
 
@@ -63,10 +70,11 @@ h4 {
 
 .right{
   width:600px;
-  top:22%;
+  top:50%;
   left:50%;
-  margin:-100px 0 0 -220px;
-  position: absolute;
+  margin: 0px 0 0 -220px;
+  position:relative;
+
  }
 
 
@@ -120,6 +128,10 @@ input.carbutton{
 
 .badge{
   background-color: #52bab3;
+}
+
+.badgeone {
+  margin-left: 30%;
 }
 
 
@@ -353,5 +365,5 @@ output:after {
  color: white;
 }
 
-
+}
 
