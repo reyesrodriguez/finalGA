@@ -39,13 +39,13 @@
 
             
             <h5>In a scale from 1 to 10 do you feel you are overpaying.</h5>
-              <input id="slider" type="range" name="input" class="amount" min="1" max="10" value="1"  ng-model="formData.negative"onchange="updateTextInputTwo(this.value);"><br>
+              <input id="slider" type="range" name="input" class="amount" min="10" max="50" value="1"  ng-model="formData.negative"onchange="updateTextInputTwo(this.value);"><br>
               <input type="number" class="slidersfont" id="textInputTwo" val="" required><br>
               
 
             
             <h5>In a scale from 1 to 50 how safe you feel in your neighborhood.</h5>
-              <input id="slider" type="range" name="input" class="amount" min="1" max="50" value="1"  ng-model="formData.safe" onchange="updateTextInputThree(this.value);"><br>
+              <input id="slider" type="range" name="input" class="amount" min="10" max="50" value="1"  ng-model="formData.safe" onchange="updateTextInputThree(this.value);"><br>
               <input type="text" class="slidersfont" id="textInputThree" val="" required><br><br>
 
               <a href="#/data"><button type="submit" class="btn btn-primary btn-lg submit" ng-click="createEntity()" ng-disabled="userForm.$invalid">Submit</button></a>
