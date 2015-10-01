@@ -1,7 +1,7 @@
 
 <div class="right">
 <h5 class="right">brooklyn bronx manhattan staten island queens</h5>
-<p></p>
+<p class="fright"></p>
 </div>
 <script>
  $(document).ready(function(){
@@ -10,7 +10,7 @@
 
  //-------------this is size of viz window--------------//
 var margin = {top: 40, right: 20, bottom: 30, left: 40},
-    width = 600 - margin.right - margin.left
+    width = 625 - margin.right - margin.left
     height = 500 - margin.top - margin.bottom;
 var padding = 70;
 //-------------this starts the axis------------//
@@ -46,13 +46,13 @@ d3.json("http://45.55.46.92:8080/api/entities/", function(data){
 // yScale.domain([0, d3.max(data, yValue)+1]);
 //--------------creates the axis and ticks----------------//
 var xValue = function(d) { return d.rent;},
-    xScale = d3.scale.linear().domain([0, 6500, d3.max(data, function(d){return d.rent;})])
+    xScale = d3.scale.linear().domain([0, 5500, d3.max(data, function(d){return d.rent;})])
     .range([0, width]),
     xMap = function(d){ return xScale(xValue(d));},
     xAxis = d3.svg.axis().scale(xScale).orient("bottom");
     
 var yValue = function(d) { return d.negative;},
-    yScale = d3.scale.linear().domain([0, 50, d3.max(data, function(d){return d.negative;})])
+    yScale = d3.scale.linear().domain([0, 45, d3.max(data, function(d){return d.negative;})])
     .range([height, 0]),
     yMap = function(d){ return yScale(yValue(d));},
     yAxis = d3.svg.axis().scale(yScale).orient("left");
@@ -66,7 +66,7 @@ var yValue = function(d) { return d.negative;},
       .append("text")
       .attr("class", "label")
       .attr("x", width)
-      .attr("x", 500)
+      .attr("x", 550)
       .attr("y", 19)
       .style("text-anchor", "end")
       .text("Rent")
@@ -79,9 +79,9 @@ var yValue = function(d) { return d.negative;},
       .append("text")
       .attr("class", "label")
       .attr("transform", "rotate(-90)")
-      .attr("y", 15)
+      .attr("y", -33)
       .style("text-anchor", "end")
-      .text("How Angry are You?")
+      .text("Do you feel you're overpaying?")
 
 //------------------creates the circles----------------//
   curses = svg.selectAll('circle')
