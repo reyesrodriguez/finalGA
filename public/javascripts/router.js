@@ -5,7 +5,7 @@ finalNode.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider
 
 	.when("/", {templateUrl: "partials/home.html", controller: "mainController"})
-	// .when("/about", {templateUrl: "partials/about.html", controller: "mainController"})
+    .when("/about", {templateUrl: "partials/about.html", controller: "mainController"})
 	.when("/home", {templateUrl: "partials/home.html", controller: "mainController"})
 	.when("/data", {templateUrl: "partials/data.html", controller: "mainController"}, {reloadOnSearch: false})
 	.when("/datalog", {templateUrl: "partials/datalog.html", controller: "mainController"})
