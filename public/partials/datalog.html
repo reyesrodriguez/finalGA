@@ -1,16 +1,11 @@
  <div ng-controller="mainController" >
 
  <div class="row"> 
- <div class="col-md-12 wright">
- <br>
- 
-
-	<center><button class="btn btn-primary badgeone" type="button">
-  		Data Log  <span class="badge">{{entities.length}}</span>
+ <div class="col-xs-12 right">
+ <center><button class="btn btn-primary badgeone" type="button">Data Log<span class="badge">{{entities.length}}</span>
 	</button></center>
    
-
-  <div class="checkbox col-md-12" ng-repeat="entity in entities">
+  <div class="checkbox col-xs-12" ng-repeat="entity in entities">
   <center><div class="mini-card">
   <label>
   <input type="button" class="carbutton" ng-click="deleteEntity(entity._id)">Thanks for submitting your info dear resident of {{entity.borough}} <span class="badge">{{entity.rent}}</span>. 

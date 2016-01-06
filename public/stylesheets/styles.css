@@ -4,14 +4,38 @@
 
 
 /*---------------home page fonts and placement of columns-------------*/
-@media (min-width: 325px) {
- 
- #viz {
-  max-width: 100%; 
-  display:block; 
-height: auto;
+@media (min-width: 600px) { 
 
+    #slider {
+    width: 225px;
 }
+
+.mini-card{
+  width:225px;
+  height:50px;
+  text-align: left;
+  border: 2px solid #8f8f8f;border-radius: 9px 9px 9px 9px;
+  -moz-border-radius: 9px 9px 9px 9px;
+  -webkit-border-radius: 9px 9px 9px 9px;
+  border: 2px solid #8f8f8f;
+
+
+ }
+
+ input.carbutton{
+  padding-bottom:3px;
+  width:12px;
+  height:12px;
+}
+
+.badge{
+  background-color:#52bab3;
+}
+
+.right {
+  padding-left:5px;
+}
+
 
 }
 
@@ -20,6 +44,7 @@ height: auto;
 footer{
   background-color: red;
 }
+
 
 .about{
   font-size: 2.5em;
@@ -37,17 +62,13 @@ footer{
   font-color:#800000;
 }
 
-
-.r{
-  margin-left: 30%;
-}
-
-
-
-
 h4 {
   font-family: 'Merriweather', serif;
   font-weight: 400 italic;
+}
+
+.fright{
+  text-align: center;
 }
 
 /*----------------slider positioning---------------*/
@@ -69,27 +90,11 @@ h4 {
   margin:auto;
   border: none;
   color: red;
+
   
 }
 
-.right{
-  width:auto;
-  top:50%;
-  left:50%;
-  margin: 0px 0 0 -300px;
-  position:relative;
- }
-
-.fright{
-
-}
-
 /*-------the chart in data-------------*/
-
-#viz {
- 
-
-}
 
 .label{
   font-color: midnightblue ;
@@ -116,9 +121,10 @@ a:hover, :after {
 
 
 /*------created a mini card for the log ---------------*/
+
 .mini-card{
-  width:700px;
-  height:40px;
+  width:350px;
+  height:50px;
   text-align: left;
   border: 2px solid #8f8f8f;border-radius: 9px 9px 9px 9px;
   -moz-border-radius: 9px 9px 9px 9px;
@@ -135,6 +141,11 @@ input.carbutton{
 
 .badge{
   background-color: #52bab3;
+}
+
+.right{
+  padding-right: 15px;
+  padding-left:10px;
 }
 
 
